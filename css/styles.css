@@ -32,7 +32,7 @@ button {
 body {
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
+    background-color: #c6c6ce;
 }
 .wrapper {
     display: grid;
@@ -43,15 +43,15 @@ body {
 button {
     display: inline-block;
     border-radius: 10px;
-    background-color: #FF834E;
-    color: #000;
+    background-color: #454655;
+    color: #fff;
     text-align: center;
     padding: 0.5rem;
     min-width: 8rem;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-    border: 1px #ff834E solid;
+    border: 1px #454655 solid;
     box-shadow: 0px 3px 6px #000;
 }
 
@@ -87,11 +87,17 @@ button:hover span:after {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
+    background-image: url("https://images.unsplash.com/photo-1636690424408-4330adc3e583?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
 }
+
 .header__logo img{
-    width: 80%;
-    margin: 2rem;
+    width: 100%;
+    padding: 2rem;
+
+
 }
 /* STYLE och ANIMATION hamburgermeny*/
 .menu__icon{
@@ -161,6 +167,7 @@ button:hover span:after {
 /*MAIN*/
 .booking {
     border-top: 3px #000 solid;
+    background-color: #c6c6ce;
     /* border-bottom: 3px rgb(0, 0, 0) solid; */
 }
 .booking__form {
@@ -187,6 +194,10 @@ button:hover span:after {
     border-top: 3px #000 solid;
     border-bottom: 3px #000 solid;
 }
+.offer__heading {
+    color: crimson;
+    font-size: 3rem;
+}
 .offer__subheading {
     display: none;
 }
@@ -194,22 +205,30 @@ button:hover span:after {
     margin: 2rem 0rem;
     color: #fff;
 }
+.offer__button {
+    background-color: crimson;
+    border-color: crimson;
+    color:#D3C5AB ;
+    font-weight: 400;
+}
 
 .welcome {
-    background-color: #FF834E;
+    background-color: #454655;
     padding: 3rem 1rem;
     text-align: center;
 }
 .welcome__heading {
     margin-bottom: 2rem;
     font-size: 3rem;
+    color: #fff;
 }
 .welcome__subheading {
     font-size: 1.5rem;
+    color: #fff;
 }
 
 .cards {
-    background-color: bisque;
+    background-color: #c6c6ce;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -264,7 +283,6 @@ button:hover span:after {
     background-image: url("../assets/photos/03-day.jpg");
     background-size: cover;
 }
-
 .cards__border{
     position: absolute;
     width: 220px;
@@ -279,14 +297,41 @@ button:hover span:after {
     border: 2px solid #000;
 }
 
-
-
 .cards__heading {
-    margin-top: 40%;
+    margin-top: 30%;
     color: #fff;
     padding: 0rem 2rem;
- 
 }
 .cards__card:nth-child(1):hover .cards__heading, .cards__card:nth-child(2):hover .cards__heading, .cards__card:nth-child(3):hover .cards__heading{
     color: #000;
+}
+
+.eat {
+    background-color: #A7A8CD;
+    background-image: url("../assets/photos/brunch.jfif");
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    border-top: 1rem solid #000;
+    border-bottom: 1rem solid #000;
+}
+.eat__text {
+    background-color: #A7A8CD;
+    padding: 1rem;
+    margin: 3rem;
+}
+
+.activities {
+    background-image: url("../assets/photos/skiing.jfif");
+    background-size: cover;
+
+
+}
+
+.footer {
+    height: 9rem;
+    background-color: #C6C6CE;
 }
