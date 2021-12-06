@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Bonz.ai - Värmlands nordligaste AI-hotell</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <figure class="header__logo">
+                <img src="assets/logo/bonz.ai-logo-color_portrait_full.svg" alt="Bonz.ai logo">
+            </figure>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#" class="menu__link">Rum</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Paket</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Mat & dryck</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Konferens</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Om hotellet</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Kontakt</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Hitta hit</a></li>
+                </ul>
+                <label for="check" class="menu__icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="booking">
+                <form class="booking__form" action="">
+                    <section>
+                        <label for="arrival">Ankomst</label>
+                        <input type="date" id="arrival">
+                    <label for="departure">Avresa</label>
+                    <input type="date" id="arrival">
+                    <label for="guest">Antal gäster:</label>
+                    <select name="" id="guest">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                    </select>
+                    <label for="room">Antal rum:</label>
+                    <select name="" id="room">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                    </select>
+                    <button class="button booking__button">Boka</button>
+                </form>
+            </section>
+            <article class="offer">
+                <h2 class="offer__heading">Julerbjudande</h2>
+                <h3 class="offer__subheading"> Trött på stela jular med släkten? Fira den hos oss och du behöver inte träffa en annan människa. Våra AI-robotar finns här för att göra din jul så lugn och mysig som möjligt. </h3>
+                <h4 class="offer__offer">23-25 december <span>1 400kr/person</span></h4>
+                <button class="button"></button>
+            </article>
+            <article class="welcome">
+                <h1 class="welcome__heading">Välkommen till oss</h1>
+                <h3>Värmlands nordligaste hotell som drivs med AI (artificiell intellgens) med naturen som mittpunkt. Här bor du på ett hotell med nästan bara robotar som personal. På Branästoppen har du nära till natur, uteliv och aktiviteter.</h3>
+                <section class="card">
+                    <button class="button">Läs mer</button>
+                </section>
+                <section class="card">
+                    <button class="button">Läs mer</button>
+                </section>
+                <section class="card">
+                    <button class="button">Läs mer</button>
+                </section>
+            </article>
+            <article class="eat">
+                <h2 class="eat__heading">Bruncha hos oss</h2>
+                <h4>Varje dag mellan kl 11-14</h4>
+                <button class="button">Se menyn</button>
+            </article>
+            <article class="activities">
+                <h2 class="activities__heading">Aktiviteter i närheten</h2>
+                <h3>Upplev naturen, färdas med flotte i älven, älgsafari eller en skidtur?</h3>
+                <h4>Branäs har ett stort utbud av aktiviteter i närheten.</h4>
+                <button class="button activities__button">Besök Branäs</button>
+            </article>
+        </main>
+    </div>
+    <script>
+        document.querySelector('.menu__icon')
+            .addEventListener('click', (e) => {
+                console.log('hej')
+                    document.querySelector('.menu__list').classList.toggle('open')
+            })
+    </script>
+</body>
+</html>

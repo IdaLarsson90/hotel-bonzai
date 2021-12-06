@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Maven+Pro:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*TYPOGRAPHY*/
+h1, h2 {
+    font-family: 'Maven Pro', sans-serif;
+}
+h3, h4 {
+    font-family: 'Open Sans', sans-serif;
+}
+p {
+    font-family: 'EB Garamond', serif;
+}
+a {
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
+    color: #fff;
+    text-decoration: none;
+}
+/* GENERIC */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+
+.button {
+
+}
+
+/* HEADER*/
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.header__logo img{
+    width: 80%;
+    margin: 2rem;
+}
+/* STYLE och ANIMATION hamburgermeny*/
+.menu__icon{
+    display:flex;
+    flex-direction:column;
+    width:50px;
+    cursor:pointer;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+}
+.menu__icon span{
+    background: rgb(88, 234, 190);
+    border-radius:10px;
+    height: 4px;
+    margin: 4px 0;
+    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.menu__icon span:nth-of-type(1){
+    width:50%;
+}
+.menu__icon span:nth-of-type(2){
+    width:100%;
+}
+.menu__icon span:nth-of-type(3){
+    width:75%;
+}
+
+.open ~ .menu__icon span:nth-of-type(1){
+    transform-origin:bottom;
+    transform:rotatez(45deg) translate(4px,0px)
+}
+.open ~ .menu__icon span:nth-of-type(2){
+    transform-origin:top;
+    transform:rotatez(-45deg)
+}
+.open ~ .menu__icon span:nth-of-type(3){
+    transform-origin:bottom;
+    width:50%;
+    transform: translate(22px,-3px) rotatez(45deg);
+}
+   
+/*MENU*/
+.menu__list {
+    transform: translateX(-350px);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.open {
+    background-color: rgb(0, 0, 0, 0.7);
+    list-style: none;
+    padding: 3rem 2rem;
+    transform: translateX(0);
+    transition: linear 0.3s ;
+    top: 0;
+    left: 0;
+}
+
+/*MAIN*/
+.booking__form {
+    display: flex;
+}
