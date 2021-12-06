@@ -18,9 +18,15 @@ p {
 a {
     font-size: 2rem;
     font-family: 'EB Garamond', serif;
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
+button {
+    font-size: 1rem;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 500;
+}
+
 /* GENERIC */
 
 body {
@@ -34,10 +40,48 @@ body {
     grid-template-rows: auto;
 }
 
-.button {
-
+button {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #FF834E;
+    color: #000;
+    text-align: center;
+    padding: 0.5rem;
+    min-width: 8rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    border: 1px #ff834E solid;
+    box-shadow: 0px 3px 6px #000;
 }
 
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 15px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.cards__button {
+    padding: 0.2rem;
+}
 /* HEADER*/
 .header{
     display: flex;
@@ -61,7 +105,7 @@ body {
     z-index: 1;
 }
 .menu__icon span{
-    background: rgb(88, 234, 190);
+    background: #000;
     border-radius:10px;
     height: 4px;
     margin: 4px 0;
@@ -76,7 +120,6 @@ body {
 .menu__icon span:nth-of-type(3){
     width:75%;
 }
-
 .open ~ .menu__icon span:nth-of-type(1){
     transform-origin:bottom;
     transform:rotatez(45deg) translate(4px,0px)
@@ -99,16 +142,151 @@ body {
     left: 0;
 }
 .open {
-    background-color: rgb(0, 0, 0, 0.7);
+    background-color: rgb(999, 999, 999, 0.85);
     list-style: none;
     padding: 3rem 2rem;
+    box-shadow:2px 2px 20px dimgray;
     transform: translateX(0);
     transition: linear 0.3s ;
     top: 0;
     left: 0;
 }
+.menu__item {
+    padding: 0.75rem;
+}
+.menu__link--active{
+   font-weight: 500;
+}
 
 /*MAIN*/
+.booking {
+    border-top: 3px #000 solid;
+    /* border-bottom: 3px rgb(0, 0, 0) solid; */
+}
 .booking__form {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    /* background-color: rgb(88, 234, 190, 0.7); */
+}
+.booking__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.offer {
+    background-image: url("../assets/photos/christmas.jfif");
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 2rem;
+    border-top: 3px #000 solid;
+    border-bottom: 3px #000 solid;
+}
+.offer__subheading {
+    display: none;
+}
+.offer__offer {
+    margin: 2rem 0rem;
+    color: #fff;
+}
+
+.welcome {
+    background-color: #FF834E;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+.welcome__heading {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+.welcome__subheading {
+    font-size: 1.5rem;
+}
+
+.cards {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cards__card {
+    width: 250px;
+    min-height: 250px;
+    position: relative;
+    margin: 0.5rem;
+}
+.cards__card:nth-child(1) {
+    background-image: url("../assets/photos/09-night.jpg");
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.cards__card:nth-child(2) {
+    background-image: url("../assets/photos/02-night.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-position: right;
+}
+.cards__card:nth-child(3) {
+    background-image: url("../assets/photos/03-night.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.cards__card:nth-child(1):hover{
+    background-image: url("../assets/photos/09-day.jpg");
+    background-size: cover;
+    background-position: right;
+}
+.cards__card:nth-child(2):hover{
+    background-image: url("../assets/photos/02-day.jpg");
+    background-size: cover;
+    background-position: right;
+}
+.cards__card:nth-child(3):hover{
+    background-image: url("../assets/photos/03-day.jpg");
+    background-size: cover;
+}
+
+.cards__border{
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 2px solid #fff;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 55px;
+}
+.cards__card:nth-child(1):hover .cards__border, .cards__card:nth-child(2):hover .cards__border, .cards__card:nth-child(3):hover .cards__border{
+    border: 2px solid #000;
+}
+
+
+
+.cards__heading {
+    margin-top: 40%;
+    color: #fff;
+    padding: 0rem 2rem;
+ 
+}
+.cards__card:nth-child(1):hover .cards__heading, .cards__card:nth-child(2):hover .cards__heading, .cards__card:nth-child(3):hover .cards__heading{
+    color: #000;
 }
