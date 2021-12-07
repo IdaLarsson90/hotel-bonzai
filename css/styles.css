@@ -21,6 +21,9 @@ a {
     color: #000;
     text-decoration: none;
 }
+a:hover {
+    text-decoration: underline;
+}
 button {
     font-size: 1rem;
     font-family: 'Maven Pro', sans-serif;
@@ -33,11 +36,6 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #c6c6ce;
-}
-.wrapper {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
 }
 
 button {
@@ -96,8 +94,9 @@ button:hover span:after {
 .header__logo img{
     width: 100%;
     padding: 2rem;
-
-
+}
+.header__logo--desktop {
+    display: none;
 }
 /* STYLE och ANIMATION hamburgermeny*/
 .menu__icon{
@@ -141,6 +140,12 @@ button:hover span:after {
 }
    
 /*MENU*/
+.menu {
+    border-bottom: 3px #000 solid;
+}
+.menu__list--desktop {
+    display: none;
+}
 .menu__list {
     transform: translateX(-350px);
     position: absolute;
@@ -160,22 +165,35 @@ button:hover span:after {
 .menu__item {
     padding: 0.75rem;
 }
+.menu__link {
+    padding: 1rem;
+}
 .menu__link--active{
-   font-weight: 500;
+   font-weight: 600;
 }
 
+
 /*MAIN*/
+.main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "booking"
+    "offer" 
+    "welcome"
+    "cards"
+    "eat"
+    "activities";
+}
 .booking {
-    border-top: 3px #000 solid;
     background-color: #c6c6ce;
-    /* border-bottom: 3px rgb(0, 0, 0) solid; */
 }
 .booking__form {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem;
-    /* background-color: rgb(88, 234, 190, 0.7); */
 }
 .booking__item {
     display: flex;
@@ -183,6 +201,7 @@ button:hover span:after {
 }
 
 .offer {
+    grid-area: offer;
     background-image: url("../assets/photos/christmas.jfif");
     background-size: cover;
     display: flex;
@@ -190,13 +209,14 @@ button:hover span:after {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 5rem 2rem;
     border-top: 3px #000 solid;
     border-bottom: 3px #000 solid;
+
 }
 .offer__heading {
     color: crimson;
     font-size: 3rem;
+    padding-top: 4rem;
 }
 .offer__subheading {
     display: none;
@@ -210,17 +230,23 @@ button:hover span:after {
     border-color: crimson;
     color:#D3C5AB ;
     font-weight: 400;
+    margin-bottom: 4rem;
 }
 
 .welcome {
     background-color: #454655;
-    padding: 3rem 1rem;
     text-align: center;
+    grid-area: welcome;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .welcome__heading {
     margin-bottom: 2rem;
     font-size: 3rem;
     color: #fff;
+    padding-top: 4rem;
 }
 .welcome__subheading {
     font-size: 1.5rem;
@@ -233,6 +259,7 @@ button:hover span:after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    grid-area: cards;
 }
 .cards__card {
     width: 250px;
@@ -317,21 +344,161 @@ button:hover span:after {
     padding: 2rem;
     border-top: 1rem solid #000;
     border-bottom: 1rem solid #000;
+    grid-area: eat;
 }
 .eat__text {
     background-color: #A7A8CD;
     padding: 1rem;
-    margin: 3rem;
+    margin: 2rem;
 }
 
 .activities {
     background-image: url("../assets/photos/skiing.jfif");
     background-size: cover;
-
-
+    background-position: right;
+    padding: 1rem;
+    grid-area: activities;
+}
+.activities__text {
+    background-color: rgba(210, 213, 222, 0.5);
+    margin: 2rem 1rem;
+}
+.activities__text h3 {
+    margin: 2rem 0;
+}
+.activities__text h4 {
+    display: none;
 }
 
 .footer {
-    height: 9rem;
-    background-color: #C6C6CE;
+    background-color: #454655;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer__logo img {
+    height: 5rem;
+    margin: 2rem;
+}
+.footer__locate {
+    display: flex;
+    padding-bottom: 4rem;
+}
+.footer__contact {
+    border-top: 1px solid #000;
+    padding: 3rem;
+}
+.footer__link {
+    font-size: 1rem;
+    padding: 2rem 1rem;
+}
+
+/*DESKTOP*/
+@media  screen and (min-width:768px){
+    .main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "booking booking"
+        "offer welcome"
+        "cards cards"
+        "eat eat"
+        "activities activities";
+    }
+    .header {
+        background-position: bottom;
+    }
+    .header__logo {
+        display: none;
+    }
+    .header__logo--desktop {
+        display: block;
+        display: flex;
+        align-items: center;
+    
+    }
+    .header__logo--desktop img {
+        height: 50%;
+    }
+    .menu {
+        width: 100%;
+    }
+    .menu__list--desktop {
+        display: block;
+        list-style: none;
+        display: flex;
+        background-color: #fff;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .menu__link {
+        font-size: 1rem;
+    }
+    .menu__icon {
+        display: none;
+    }
+
+
+    /*MAIN*/
+    .booking {
+        grid-area: booking;
+    }
+    .booking__form {
+       justify-content: space-around;
+    }
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .offer {
+        flex-direction: column;
+    }
+    .offer h2 {
+        font-size: 3.5rem;
+    }
+    .offer__subheading {
+        display: block;
+        color: #fff;
+        margin: 4rem;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .welcome__subheading{
+        margin-bottom: 4rem;
+        padding: 0 3rem;
+        font-size: 1.2rem;
+    }
+
+    .cards {
+        padding: 5rem 0;
+    }
+    .cards__card {
+        margin: 0 2rem;
+    }
+
+    .eat {
+        justify-content: center;
+        padding: 8rem 0;
+    }
+    .eat__text {
+        padding: 3rem;
+        background-color: rgb(167, 168, 205, 0.7);
+    }
+    .eat .button {
+        padding: 1rem 3rem;
+        margin-left: 10%;
+    }
+
+    .activities__text {
+        width: 50%;
+        padding: 1rem;
+        margin: 8rem 1rem;
+    }
+    .activities__text h4 {
+        display: block;
+        margin-bottom: 1rem;
+    }
 }

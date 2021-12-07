@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0900390d4e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
     <title>Bonz.ai - Värmlands nordligaste AI-hotell</title>
 </head>
@@ -13,10 +14,13 @@
             <figure class="header__logo">
                 <img src="assets/logo/bonz.ai-logo-black_portrait_full.svg" alt="Bonz.ai logo">
             </figure>
+            <figure class="header__logo--desktop">
+                <img src="assets/logo/bonz.ai-logo-black_landscape.svg" alt="Bonz.ai logo">
+            </figure>
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__item"><a href="#" class="menu__link menu__link--active">Startsida</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Rum</a></li>
+                    <li class="menu__item"><a href="rooms.html" class="menu__link">Rum</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Paket</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Mat & dryck</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Konferens</a></li>
@@ -29,6 +33,16 @@
                     <span></span>
                     <span></span>
                 </label>
+                <ul class="menu__list--desktop">
+                    <li class="menu__item"><a href="#" class="menu__link menu__link--active">Startsida</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Rum</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Paket</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Mat & dryck</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Konferens</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Om hotellet</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Kontakt</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Hitta hit</a></li>
+                </ul>
             </nav>
         </header>
         <main class="main">
@@ -72,19 +86,18 @@
                             <option value="">10</option>
                         </select>
                     </section>
-                        <section class="booking__item">
-                            <button class="button"><span>Boka</span></button>
-                        </section>        
+                    <section class="booking__item">
+                        <button class="button"><span>Boka</span></button>
+                    </section>        
                 </form>
             </section>
             <article class="offer">
-                <section>
-                <h2 class="offer__heading">Julerbjudande</h2>
-                <h3 class="offer__subheading"> Trött på stela jular med släkten? Fira den hos oss och du behöver inte träffa en annan människa. Våra AI-robotar finns här för att göra din jul så lugn och mysig som möjligt. </h3>
-                <h4 class="offer__offer">23-25 december <span>1 400kr/person</span></h4>
+                <section class="offer__text">
+                    <h2 class="offer__heading">Julerbjudande</h2>
+                    <h3 class="offer__subheading"> Trött på stela jular med släkten? Fira den hos oss och du behöver inte träffa en annan människa. Våra AI-robotar finns här för att göra din jul så lugn och mysig som möjligt. </h3>
+                    <h4 class="offer__offer">23-25 december <span>1 400kr/person</span></h4>
                 </section>
-                <button class="button offer__button"><span>Till erbjudandet</span></button>
-                
+                <a href="http://google.se"><button class="button offer__button"><span>Till erbjudandet</span></button></a>          
             </article>
             <article class="welcome">
                 <h1 class="welcome__heading">Välkommen till oss</h1>
@@ -116,16 +129,30 @@
                 <button class="button">Se menyn</button>
             </article>
             <article class="activities">
-                <h2 class="activities__heading">Aktiviteter i närheten</h2>
-                <h3>Upplev naturen, färdas med flotte i älven, älgsafari eller en skidtur?</h3>
-                <h4>Branäs har ett stort utbud av aktiviteter i närheten.</h4>
-                <button class="button activities__button">Besök Branäs</button>
+                <section class="activities__text">
+                    <h2>Naturnära aktiviteter</h2>
+                    <h3>Upplev naturen genom en vandringsled, färdas med flotte i älven, åk på älgsafari eller en varför inte en fartfylld skidtur?</h3>
+                    <h4>Branäs har ett stort utbud av aktiviteter i närheten.</h4>
+                    <a href="https://www.branas.se/" target="_blank"><button class="button activities__button">Besök Branäs</button></a>
+                </section>
             </article>
         </main>
+        <footer class="footer">
+            <section class="footer__logo">
+                <figure>
+                    <img src="assets/logo/bonz.ai-logo-black_symbol.svg" alt="">
+                </figure>
+            </section>
+            <section class="footer__locate">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Branäsvägen 1, 680 60 Sysslebäck</p>
+            </section>
+            <section class="footer__contact">
+                <a class="footer__link" href="#">Kontakt</a>
+                <a class="footer__link" href="#">Villkor</a>
+            </section>
+        </footer>
     </div>
-    <footer class="footer">
-
-    </footer>
     <script>
         document.querySelector('.menu__icon')
             .addEventListener('click', (e) => {
