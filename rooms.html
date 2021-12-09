@@ -11,11 +11,8 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <figure class="header__logo">
-                <img src="assets/logo/bonz.ai-logo-black_landscape.svg" alt="Bonz.ai logo">
-            </figure>
-            <figure class="header__logo--desktop">
-                <img src="assets/logo/bonz.ai-logo-black_landscape.svg" alt="Bonz.ai logo">
+            <figure class="header__logo header__logo--landscape">
+                <img src="assets/logo/bonz.ai-logo-white-landscape.png" alt="Bonz.ai logo">
             </figure>
             <nav class="menu">
                 <ul class="menu__list">
@@ -28,7 +25,7 @@
                     <li class="menu__item"><a href="#" class="menu__link">Kontakt</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Hitta hit</a></li>
                 </ul>
-                <label for="check" class="menu__icon">
+                <label class="menu__icon">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -43,24 +40,26 @@
                     <li class="menu__item"><a href="#" class="menu__link">Kontakt</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Hitta hit</a></li>
                 </ul>
+                <section class="searchbar">
+                    <i class="fas fa-search "></i>
+                    <input class="searchbar__input" type="text" placeholder="Sök...">
+                </section>
             </nav>
         </header>
         <main class="main main--rooms">
             <aside class="search">
-             
                 <section class="search__arrival">
                     <section>
                         <i class="far fa-calendar-alt"></i> 
                         <h2>Incheckning</h2>
                     </section>
-                    <p>torsdag 23 december, 2021</p>
+                    <p>Torsdag 23 december, 2021</p>
                 </section>
-            
                 <section class="search__departure">
                     <section><i class="far fa-calendar-alt"></i>
                         <h2> Utcheckning</h2>
                     </section>
-                    <p>lördag 25 december, 2021</p>
+                    <p>Lördag 25 december, 2021</p>
                 </section>
                 <section class="search__guests">
                     <section>
@@ -71,12 +70,10 @@
                 </section>
                 <a class="search__link" href="index.html">Ändra</a>
             </aside>
-
             <article class="result">
                 <section class="result__filter">
                     <h2>Våra rum</h2>
-                    <label for="filter">Sortera efter:</label>
-                    <select name="" id="filter">
+                        <select name="filter" id="filter">
                         <option value="">Rekommenderad</option>
                         <option value="">Lägsta pris</option>
                         <option value="">Högsta pris</option>
@@ -117,7 +114,7 @@
                         </section>
                     </article>
                     <h4 class="rooms__offer"><span>2 999kr/person</span> 2 400kr/person</h4>
-                 <a href="http://google.se"><button class="button"><span>Boka nu</span></button></a>   
+                 <a class="button" href="#"><span>Boka nu</span></a>   
                 </section>
                 <section class="rooms">
                     <figure class="rooms__img rooms__img--double"><i class="arrow arrow--right fas fa-chevron-right"></i></figure>
@@ -154,7 +151,7 @@
                         </section>
                     </article>
                     <h4 class="rooms__offer"><span>1 999kr/person</span> 1 400kr/person</h4>
-                 <a href="http://google.se"><button class="button"><span>Boka nu</span></button></a>   
+                    <a class="button" href="#"><span>Boka nu</span></a>   
                 </section>
                 <section class="rooms">
                     <figure class="rooms__img rooms__img--family"><i class="arrow arrow--right fas fa-chevron-right"></i></figure>
@@ -191,7 +188,7 @@
                         </section>
                     </article>
                     <h4 class="rooms__offer"><span>2 499kr/person</span> 1 900kr/person</h4>
-                 <a href="http://google.se"><button class="button"><span>Boka nu</span></button></a>   
+                 <a class="button" href="#"><span>Boka nu</span></a>   
                 </section>
             </article>
             <article class="offer">
@@ -200,13 +197,13 @@
                     <h3 class="offer__subheading"> Trött på stela jular med släkten? Fira den hos oss och du behöver inte träffa en annan människa. Våra AI-robotar finns här för att göra din jul så lugn och mysig som möjligt. </h3>
                     <h4 class="offer__offer">23-25 december <span>fr. 1 400kr/person</span></h4>
                 </section>
-                <a href="http://google.se"><button class="button offer__button"><span>Till erbjudandet</span></button></a>          
+                <a class="button offer__button" href="#"><span>Till erbjudandet</span></a>          
             </article>
         </main>
         <footer class="footer">
             <section class="footer__logo">
                 <figure>
-                    <img src="assets/logo/bonz.ai-logo-black_symbol.svg" alt="">
+                    <img src="assets/logo/bonz.ai-logo-black-symbol.png" alt="bonsai symbol">
                 </figure>
             </section>
             <section class="footer__locate">
@@ -222,15 +219,20 @@
     <script>
         document.querySelector('.menu__icon')
             .addEventListener('click', (e) => {
-                    document.querySelector('.menu__list').classList.toggle('open')
+                document.querySelector('.menu__list').classList.toggle('open')
             })
     </script>
 
     <script>
         document.querySelector('.arrow--right')
             .addEventListener('click', (e) => {
-                console.log('hej')
-                    document.querySelector('.rooms__img--suite').classList.toggle('right')
+                document.querySelector('.rooms__img--suite').classList.toggle('right')
+            })
+    </script>
+    <script>
+        document.querySelector('.fa-search')
+            .addEventListener('click', (e) => {
+                document.querySelector('.searchbar__input').classList.toggle('visible')
             })
     </script>
    

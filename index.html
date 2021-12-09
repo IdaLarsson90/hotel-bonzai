@@ -12,10 +12,7 @@
     <div class="wrapper">
         <header class="header">
             <figure class="header__logo">
-                <img src="assets/logo/bonz.ai-logo-black_portrait_full.svg" alt="Bonz.ai logo">
-            </figure>
-            <figure class="header__logo--desktop">
-                <img src="assets/logo/bonz.ai-logo-black_landscape.svg" alt="Bonz.ai logo">
+                <img src="assets/logo/bonz.ai-logo-black-portrait-full.png" alt="Bonz.ai logo">
             </figure>
             <nav class="menu">
                 <ul class="menu__list">
@@ -28,7 +25,7 @@
                     <li class="menu__item"><a href="#" class="menu__link">Kontakt</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Hitta hit</a></li>
                 </ul>
-                <label for="check" class="menu__icon">
+                <label class="menu__icon">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -43,11 +40,15 @@
                     <li class="menu__item"><a href="#" class="menu__link">Kontakt</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Hitta hit</a></li>
                 </ul>
+                <section class="searchbar">
+                    <i class="fas fa-search "></i>
+                    <input class="searchbar__input" type="text" placeholder="Sök...">
+                </section>
             </nav>
         </header>
         <main class="main">
             <section class="booking">
-                <form class="booking__form" action="">
+                <form class="booking__form">
                     <section class="booking__item">
                         <label for="arrival">Incheckning</label>
                         <input type="date" id="arrival">
@@ -58,7 +59,7 @@
                     </section>
                     <section class="booking__item">
                         <label for="guest">Antal gäster:</label>
-                        <select name="" id="guest">
+                        <select name="guest" id="guest">
                             <option value="">1</option>
                             <option value="">2</option>
                             <option value="">3</option>
@@ -73,7 +74,7 @@
                     </section>
                     <section class="booking__item">
                         <label for="room">Antal rum:</label>
-                        <select name="" id="room">
+                        <select name="room" id="room">
                             <option value="">1</option>
                             <option value="">2</option>
                             <option value="">3</option>
@@ -87,7 +88,7 @@
                         </select>
                     </section>
                 </form>
-                <a href="rooms.html"><button class="button"><span>Boka</span></button></a>
+                <a  class="button" href="rooms.html"><span>Boka</span></a>
                          
             </section>
             <article class="offer">
@@ -96,28 +97,28 @@
                     <h3 class="offer__subheading"> Trött på stela jular med släkten? Fira den hos oss och du behöver inte träffa en annan människa. Våra AI-robotar finns här för att göra din jul så lugn och mysig som möjligt. </h3>
                     <h4 class="offer__offer">23-25 december <span>fr. 1 400kr/person</span></h4>
                 </section>
-                <a href="http://google.se"><button class="button offer__button"><span>Till erbjudandet</span></button></a>          
+                <a class="button offer__button" href="rooms.html"><span>Till erbjudandet</span></a>          
             </article>
             <article class="welcome">
                 <h1 class="welcome__heading">Välkommen till oss</h1>
-                <p class="welcome__subheading">Värmlands nordligaste hotell som drivs med AI (artificiell intellgens) med naturen som mittpunkt. Här bor du på ett hotell med nästan bara robotar som personal. På Branästoppen har du nära till natur, uteliv och aktiviteter.</h3>
+                <p class="welcome__subheading">Värmlands nordligaste hotell som drivs med AI (artificiell intellgens) med naturen som mittpunkt. Här bor du på ett hotell med nästan bara robotar som personal. På Branästoppen har du nära till natur, uteliv och aktiviteter.</p>
                 
             </article>
             <article class="cards">
                 <section class="cards__card">
                     <div class="cards__border"></div>
                     <h2 class="cards__heading">Fantastisk miljö</h2>
-                    <button class="button cards__button"><span>Läs mer</span></button>
+                    <a class="button cards__button" href="about.html"><span>Läs mer</span></a>
                 </section>
                 <section class="cards__card">
                     <div class="cards__border"></div>
                     <h2 class="cards__heading">Drönarservice</h2>
-                    <button class="button cards__button"><span>Läs mer</span></button>
+                    <a class="button cards__button" href="about.html"><span>Läs mer</span></a>
                 </section>
                 <section class="cards__card">
                     <div class="cards__border"></div>
                     <h2 class="cards__heading">Ekologiskt</h2>
-                    <button class="button cards__button"><span>Läs mer</span></button>
+                    <a class="button cards__button" href="about.html"><span>Läs mer</span></a>
                 </section>
             </article>
             <article class="eat">
@@ -125,21 +126,21 @@
                     <h2 class="eat__heading">Bruncha hos oss</h2>
                     <h4>Varje dag mellan kl 11-14</h4>
                 </section>
-                <button class="button"><span>Se menyn</span></button>
+                <a class="button" href="#"> <span>Se menyn</span></a>
             </article>
             <article class="activities">
                 <section class="activities__text">
                     <h2>Naturnära aktiviteter</h2>
                     <h3>Upplev naturen genom en vandringsled, färdas med flotte i älven, åk på älgsafari eller en varför inte en fartfylld skidtur?</h3>
                     <h4>Branäs har ett stort utbud av aktiviteter i närheten.</h4>
-                    <a href="https://www.branas.se/" target="_blank"><button class="button activities__button"><span>Besök Branäs</span></button></a>
+                    <a class="button" href="https://www.branas.se/" target="_blank"><span>Besök Branäs</span></a>
                 </section>
             </article>
         </main>
         <footer class="footer">
             <section class="footer__logo">
                 <figure>
-                    <img src="assets/logo/bonz.ai-logo-black_symbol.svg" alt="">
+                    <img src="assets/logo/bonz.ai-logo-black-symbol.png" alt="bonzaisymbol">
                 </figure>
             </section>
             <section class="footer__locate">
@@ -155,8 +156,13 @@
     <script>
         document.querySelector('.menu__icon')
             .addEventListener('click', (e) => {
-                console.log('hej')
-                    document.querySelector('.menu__list').classList.toggle('open')
+                document.querySelector('.menu__list').classList.toggle('open')
+            })
+    </script>
+    <script>
+        document.querySelector('.fa-search')
+            .addEventListener('click', (e) => {
+                document.querySelector('.searchbar__input').classList.toggle('visible')
             })
     </script>
 </body>

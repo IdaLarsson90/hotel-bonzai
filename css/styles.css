@@ -28,22 +28,20 @@ a:hover {
     transition: text-decoration 1s linear;
     text-decoration: underline;
 }
-button {
+.button {
     font-size: 1rem;
     font-family: 'Maven Pro', sans-serif;
     font-weight: 500;
 }
 
 /* GENERIC */
-
 body {
     width: 100vw;
     height: 100vh;
-    /* background-color: #c6c6ce; */
     background-color: #f0f1f3;
 }
 
-button {
+.button {
     display: inline-block;
     border-radius: 10px;
     background-color: #454655;
@@ -57,15 +55,13 @@ button {
     border: 1px #454655 solid;
     box-shadow: 0px 3px 6px #000;
 }
-
-button span {
+.button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
-
-button span:after {
+.button span:after {
     content: '»';
     position: absolute;
     opacity: 0;
@@ -73,18 +69,14 @@ button span:after {
     right: -15px;
     transition: 0.5s;
 }
-
-button:hover span {
+.button:hover span {
     padding-right: 15px;
 }
-
-button:hover span:after {
+.button:hover span:after {
     opacity: 1;
     right: 0;
 }
-.cards__button {
-    padding: 0.2rem;
-}
+
 /* HEADER*/
 .header{
     display: flex;
@@ -95,15 +87,32 @@ button:hover span:after {
     background-image: url("https://images.unsplash.com/photo-1636690424408-4330adc3e583?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     background-size: cover;
 }
-
 .header__logo img{
     width: 100%;
+    max-height: 700px;
     padding: 2rem;
 }
-.header__logo--desktop {
+
+.searchbar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+}
+.searchbar i {
+    font-size: 2rem;
+    color: #f0f1f3;
+    cursor: pointer;
+}
+.searchbar__input {
     display: none;
 }
-/* STYLE och ANIMATION hamburgermeny*/
+
+.visible {
+    display: block;
+}
+
+/* STYLE and ANIMATION burger menu*/
 .menu__icon{
     display:flex;
     flex-direction:column;
@@ -147,6 +156,10 @@ button:hover span:after {
 /*MENU*/
 .menu {
     border-bottom: 3px #000 solid;
+    display: flex;
+    background-color: #454655;
+    align-items: center;
+    justify-content: center;
 }
 .menu__list--desktop {
     display: none;
@@ -166,6 +179,7 @@ button:hover span:after {
     transition: linear 0.3s ;
     top: 0;
     left: 0;
+    z-index: 3;
 }
 .menu__item {
     padding: 1.75rem;
@@ -176,7 +190,6 @@ button:hover span:after {
 .menu__link--active{
    font-weight: 600;
 }
-
 
 /*MAIN*/
 .main {
@@ -189,8 +202,7 @@ button:hover span:after {
     "welcome"
     "cards"
     "eat"
-    "activities"
-    ;
+    "activities";
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -198,14 +210,14 @@ button:hover span:after {
     grid-template-areas: 
     "search"
     "offer"
-    "result"
-    ;
+    "result";
  }
  .main--about {
     grid-template-areas: 
     "nav"
     "facts";
  }
+
 .booking {
     background-color: #c6c6ce;
     grid-area: booking;
@@ -214,7 +226,6 @@ button:hover span:after {
     justify-content: center;
     align-items: center;
 }
-
 .booking__form {
     display: flex;
     flex-wrap: wrap;
@@ -225,7 +236,6 @@ button:hover span:after {
     display: flex;
     flex-direction: column;
 }
-
 
 .offer {
     grid-area: offer;
@@ -238,12 +248,13 @@ button:hover span:after {
     text-align: center;
     border-top: 3px #000 solid;
     border-bottom: 3px #000 solid;
-
 }
 .offer__heading {
     color: crimson;
-    font-size: 3rem;
+    font-size: 2rem;
     padding-top: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .offer__subheading {
     display: none;
@@ -352,7 +363,6 @@ button:hover span:after {
 .cards__card:nth-child(1):hover .cards__border, .cards__card:nth-child(2):hover .cards__border, .cards__card:nth-child(3):hover .cards__border{
     border: 2px solid #000;
 }
-
 .cards__heading {
     margin-top: 30%;
     color: #fff;
@@ -360,6 +370,9 @@ button:hover span:after {
 }
 .cards__card:nth-child(1):hover .cards__heading, .cards__card:nth-child(2):hover .cards__heading, .cards__card:nth-child(3):hover .cards__heading{
     color: #000;
+}
+.cards__button {
+    padding: 0.2rem;
 }
 
 .eat {
@@ -423,7 +436,7 @@ button:hover span:after {
 }
 
 
-/*ROOMS-sidan*/
+/*ROOMS-page*/
 .search {
     grid-area: search ;
     display: flex;
@@ -434,7 +447,6 @@ button:hover span:after {
 }
 .search section {
     padding: 0.5rem 0.5rem 0.5rem 0;
-
 }
 .search section section {
     display: flex;
@@ -442,6 +454,7 @@ button:hover span:after {
     color: #454655;
 }
 .search h2{
+    margin-left: 0.5rem;
     font-size: 1.2rem;
     color: #454655;
 }
@@ -482,6 +495,7 @@ button:hover span:after {
     background-size: cover;
     background-position: center;
     position: relative;
+    z-index: 1;
     margin-bottom: 2rem;
 }
 .rooms__img--suite {
@@ -542,7 +556,7 @@ button:hover span:after {
     color: #000;
 }
 
-/*ABOUT-sidan*/
+/*ABOUT-page*/
 .nav {
     grid-area: nav;
     padding: 1rem;
@@ -551,6 +565,7 @@ button:hover span:after {
 .nav__link {
     font-size: 1.2rem;
 }
+
 .facts {
     grid-area: facts;
 }
@@ -564,8 +579,11 @@ button:hover span:after {
     width: 100%;
 }
 
-/*DESKTOP*/
+/*Bigger screens*/
 @media  screen and (min-width:1400px) {
+    p {
+        font-size: 1.5rem;
+    }
     .menu {
         width: 100%;
         position: fixed;
@@ -576,9 +594,7 @@ button:hover span:after {
     .menu__list--desktop {
         display: block;
         display: flex;
-        background-color: #454655;
         justify-content: center;
-    
     }
     .menu__link {
         color: #fff;
@@ -588,36 +604,44 @@ button:hover span:after {
         display: none;
     }
 }
-
+/*Desktop/Laptop*/
 @media  screen and (min-width:768px){
-    .main {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "booking booking booking"
-        "welcome welcome offer"
-        "cards cards cards"
-        "eat eat eat"
-        "activities activities activities";
-    }
-    .main--rooms {
-        grid-template-areas: 
-        "result result search"
-        "result result offer"
-        "result result .";
-        gap: 1rem;
-    }
-    .main--about {
-        grid-template-areas: 
-        "nav facts facts";
+    .searchbar {
+        position: static;
     }
     .header {
         background-position: center;
         padding-top: 5rem;
     }
+    .header__logo--landscape img{
+        max-height: 8rem;
+    }
 
-    /*MAIN*/
+   /*MAIN*/
+    .main {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "booking booking booking booking booking booking"
+        "welcome welcome welcome welcome offer offer"
+        "cards cards cards cards cards cards"
+        "eat eat eat eat eat eat"
+        "activities activities activities activities activities activities";
+    }
+    .main--rooms {
+        grid-template-areas: 
+        "result result result result search search"
+        "result result result result offer offer"
+        "result result result result . .";
+        gap: 1rem;
+    }
+    .main--about {
+        grid-template-areas: 
+        "facts facts facts facts nav nav"
+        "facts facts facts facts . .";
+    }
+
     .booking {
         grid-area: booking;
         flex-direction: row;
@@ -630,22 +654,19 @@ button:hover span:after {
        gap: 3rem;
     }
 
-    .cards {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
     .offer {
         flex-direction: column;
         border: none;
     }
     .offer h2 {
-        font-size: 3.5rem;
+        margin-top: 2rem;
+        font-size: 2rem;
+        color: #000;
     }
     .offer__subheading {
         display: block;
         color: #fff;
-        margin: 4rem;
+        margin: 2rem;
         font-size: 1rem;
         font-weight: 400;
     }
@@ -658,6 +679,8 @@ button:hover span:after {
 
     .cards {
         padding: 5rem 0;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     .cards__card {
         margin: 0 2rem;
@@ -686,9 +709,37 @@ button:hover span:after {
         margin-bottom: 1rem;
     }
 
-    /*ROOMS-SIDAN*/
+    /*ROOMS-page Desktop*/
     .search {
         position: relative;
     }
- 
+    
+    /*ABOUT-page Desktop*/
+    .nav, .search {
+        text-align: left;
+        position: sticky;
+        top: 100px;
+    }
+    .nav__link {
+        font-size: 2rem;
+    }
+
+    .facts section h2 {
+        font-size: 2rem;
+    } 
+    .facts section h4 {
+        font-size: 1.5rem;
+    }
+    .facts section p {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    .facts p {
+        text-align: justify;
+    }
+    .facts #ai img {
+        width: 40%;
+        float: right;
+        margin-left: 1rem;
+    }
 }
