@@ -171,7 +171,7 @@ body {
     left: 0;
 }
 .open {
-    background-color: rgb(999, 999, 999, 0.85);
+    background-color: rgb(255, 255, 255, 0.85);
     list-style: none;
     padding: 3rem 2rem;
     box-shadow:2px 2px 20px dimgray;
